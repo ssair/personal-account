@@ -1,30 +1,40 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="app">
+
+    <p id="header">Vue.js 3, vue-cli, vue-router, vuex</p>
+    <hr>
+
+    <router-view></router-view>
+
   </div>
-  <router-view/>
 </template>
 
+<script>
+
+export default {
+  name: 'app',
+}
+
+</script>
+
 <style>
+
+@import './css/reset.module.css';
+
+:root {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #333;
 }
 
-#nav {
-  padding: 30px;
+#header {
+  padding-top: 2rem;
+  font-size: 2rem;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
